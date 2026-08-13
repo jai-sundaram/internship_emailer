@@ -26,6 +26,12 @@ greenhouse:
   - { company: Jump Trading,       token: jumptrading }
   - { company: DRW,                token: drweng }
   - { company: Akuna Capital,      token: akunacapital }
+  - { company: Point72,            token: point72 }
+  - { company: Tower Research Capital, token: towerresearchcapital }
+  - { company: Virtu Financial,    token: virtu }
+  - { company: AQR Capital Management, token: aqr }
+  - { company: Five Rings,         token: fiveringsllc }
+  - { company: XTX Markets,        token: xtxmarketstechnologies }
   # big tech / unicorns / startups  (verified tokens)
   - { company: SpaceX,             token: spacex }
   - { company: Stripe,             token: stripe }
@@ -44,11 +50,36 @@ greenhouse:
   - { company: Verkada,            token: verkada }
   - { company: Qualtrics,          token: qualtrics }
   - { company: Anduril,            token: andurilindustries }
+  # Northern Virginia (NoVA) tech/product companies (verified tokens)
+  - { company: Appian,             token: appian }
+  - { company: ID.me,              token: idme }
+  - { company: Alarm.com,          token: alarmcom }
+  - { company: Yext,               token: yext }
+  # major tech (verified tokens)
+  - { company: Datadog,            token: datadog }
+  - { company: Cloudflare,         token: cloudflare }
+  - { company: Figma,              token: figma }
+  - { company: MongoDB,            token: mongodb }
+  - { company: DoorDash,           token: doordashusa }
+  - { company: Reddit,             token: reddit }
+  - { company: Pinterest,          token: pinterest }
+  - { company: Block,              token: block }
+  - { company: Roblox,             token: roblox }
+  - { company: Lyft,               token: lyft }
+  - { company: Dropbox,            token: dropbox }
+  - { company: Twilio,             token: twilio }
+  - { company: Instacart,          token: instacart }
+  - { company: Wiz,                token: wizinc }
+  - { company: Okta,               token: okta }
+  - { company: GitLab,             token: gitlab }
+  - { company: PagerDuty,          token: pagerduty }
+  - { company: HubSpot,            token: hubspotjobs }
 
 lever:
   - { company: Palantir,           token: palantir }
   - { company: Plaid,              token: plaid }
   - { company: Netflix,            token: netflix }
+  - { company: Spotify,            token: spotify }
 
 ashby:
   - { company: OpenAI,             token: openai }
@@ -56,6 +87,8 @@ ashby:
   - { company: Notion,             token: notion }
   - { company: Linear,             token: linear }
   - { company: Cursor,             token: cursor }
+  - { company: Deel,               token: deel }
+  - { company: Confluent,          token: confluent }
 
 workday:
   # tenant + wd_num + site come from the careers URL; verify each before trusting.
@@ -63,8 +96,35 @@ workday:
   - { company: Salesforce,     tenant: salesforce, wd_num: 12, site: External_Career_Site }
   - { company: Capital One,    tenant: capitalone, wd_num: 12, site: Capital_One }
   - { company: Morgan Stanley, tenant: ms, wd_num: 5, site: External }
-  # Goldman's CXS endpoint rejected the generic body (422) — needs the exact
-  # site name from its careers URL. Left disabled until verified.
+  # Goldman's CXS endpoint rejected the generic body (422). Further check found
+  # their candidate application flow actually runs on goldmansachs.tal.net, not
+  # Workday — so this is likely unfixable as a Workday entry. Left disabled.
   - { company: Goldman Sachs, tenant: goldmansachs, wd_num: 1, site: GS_External, enabled: false }
+  - { company: PayPal,        tenant: paypal, wd_num: 1, site: jobs }
+  - { company: Johnson & Johnson, tenant: jj, wd_num: 5, site: JJ }
+  - { company: Adobe,         tenant: adobe, wd_num: 5, site: external_experienced }
   # Consulting (tech tracks) are mostly Workday — add when you confirm site names:
   # - { company: Deloitte,  tenant: deloitte,  wd_num: 1, site: Deloitte_US_External }
+  # Northern Virginia (NoVA) / requested companies — verified
+  - { company: Freddie Mac,   tenant: freddiemac, wd_num: 5, site: External }
+  - { company: CoStar Group,  tenant: costar,     wd_num: 1, site: CoStarCareers }
+  - { company: Mastercard,    tenant: mastercard, wd_num: 1, site: CorporateCareers }
+  - { company: Fannie Mae,    tenant: fanniemae,  wd_num: 1, site: FannieMaeCareers }
+  - { company: Visa,          tenant: visa,       wd_num: 5, site: Visa }
+  - { company: GEICO,         tenant: geico,      wd_num: 1, site: External }
+  # Verizon uses Workday but the exact tenant/site combo couldn't be confirmed
+  # from public search — verify manually (careers.verizon.com) before enabling:
+  # - { company: Verizon, tenant: verizon, wd_num: 5, site: verizon-careers, enabled: false }
+  # Major banks (verified tokens)
+  - { company: Citigroup,     tenant: citi,        wd_num: 5,  site: "2" }
+  - { company: Wells Fargo,   tenant: wf,          wd_num: 1,  site: WellsFargoJobs }
+  - { company: BlackRock,     tenant: blackrock,   wd_num: 1,  site: BlackRock_Professional }
+  - { company: State Street,  tenant: statestreet, wd_num: 1,  site: Global }
+  - { company: PNC,           tenant: pnc,         wd_num: 5,  site: External }
+  - { company: Truist,        tenant: truist,      wd_num: 1,  site: Careers }
+  # Requested batch — verified
+  - { company: General Motors, tenant: generalmotors, wd_num: 5, site: Careers_GM }
+  - { company: Comcast,        tenant: comcast,        wd_num: 5, site: Comcast_Careers }
+  - { company: Workday,        tenant: workday,        wd_num: 5, site: Workday }
+  - { company: Cisco,          tenant: cisco,          wd_num: 5, site: Cisco_Careers }
+  - { company: Fidelity,       tenant: fmr,            wd_num: 1, site: FidelityCareers }
